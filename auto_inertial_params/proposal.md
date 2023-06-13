@@ -53,7 +53,7 @@ Currently to specify the `<inertial>` element of a `<link>` in SDFormat, the use
 This proposal suggests the addition of an `auto` parameter for the `<inertia>` tag that would tell `libsdformat` to calculate Inertia matrix values automatically for the respective link. 
 
 Usage example:    
-```xml
+```
 <inertia auto=”true” />
 ```
 
@@ -110,7 +110,7 @@ $$\begin{eqnarray}
  I_{23}  = I_{yz} = \int -yzdm = I_{zy} = I_{32} \\
 \end{eqnarray}$$
 
-In this solution, the **infinitesimal element** of the object can be **represented by the each Voxel.** Instead of calculating the mass \\(dm\\) for each voxel, we will calculate the volume \\(dv\\) of each voxel using the voxel size (the simple volume formula of a cube can be used because voxels are cubes). Then mass for each element would be mass density, \\(\rho\\) multiplied by the volume, \\(dv\\). Considering the mass density to be constant and substituting in the above equations we get:
+In this solution, the **infinitesimal element** of the object can be **represented by the each Voxel.** Instead of calculating the mass $ dm $ for each voxel, we will calculate the volume $dv$ of each voxel using the voxel size (the simple volume formula of a cube can be used because voxels are cubes). Then mass for each element would be mass density, \\(\rho\\) multiplied by the volume, \\(dv\\). Considering the mass density to be constant and substituting in the above equations we get:
 
 $$\begin{eqnarray}
 I_{11} = I_{xx} = \rho\int (y^2 + z^2)dv \\
