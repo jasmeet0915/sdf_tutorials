@@ -88,7 +88,7 @@ The Moment of Inertia Matrix of an object is a 3x3 symmetric matrix. This means 
 
 $$ I_{ij} = I_{ji} $$
 
-The diagonal elements of the matrix are denoted as $ I_{xx} $, $ I_{yy} $ and $ I_{zz} $ and are the Moments of Inertia of the object. The remaining 6 off-diagonal elements are called the Products of Inertia and their value depends on the symmetry of the object about the axes about which the MOI Tensor is being calculated. Only 3 values out of the 6 are needed since the matrix is symmetric. 
+The diagonal elements of the matrix are denoted as $I_{xx}$, $I_{yy}$ and $I_{zz}$ and are the Moments of Inertia of the object. The remaining 6 off-diagonal elements are called the Products of Inertia and their value depends on the symmetry of the object about the axes about which the MOI Tensor is being calculated. Only 3 values out of the 6 are needed since the matrix is symmetric. 
 
 >**Note:** If the axis about which the MOI Tensor is calculated, is taken to be the principal axis of inertia, then the products of inertia become 0 and the matrix becomes a diagonal matrix.
 
