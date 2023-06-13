@@ -96,29 +96,29 @@ All these values of MOI Tensor can be calculated as follows:
 
 $$\begin{eqnarray} 
  I\_{11} = I\_{xx} = \int (y^2 + z^2)dm \\\
- I\_{22} = I\_{yy} = \int (x^2 + z^2)dm \\
- I\_{33} = I\_{zz} = \int (x^2 + y^2)dm \\ 
+ I\_{22} = I\_{yy} = \int (x^2 + z^2)dm \\\
+ I\_{33} = I\_{zz} = \int (x^2 + y^2)dm \\\
 \end{eqnarray}$$
 
-Here dm is the mass of an infinitesimal unit of the object and x, y, z are the distances of that unit from axes. 
+Here \\(dm\\) is the mass of an infinitesimal unit of the object and \\(x, y, z\\) are the distances of that unit from axes. 
 
 Similarly, the Products of Inertia can be calculated as:
 
 $$\begin{eqnarray}
- I\_{12}  = I\_{xy} = \int -xydm = I\_{yx} = I\_{21} \\
- I\_{13}  = I\_{xz} = \int -xzdm = I\_{zx} = I\_{31} \\
- I\_{23}  = I\_{yz} = \int -yzdm = I\_{zy} = I\_{32} \\
+ I\_{12}  = I\_{xy} = \int -xydm = I\_{yx} = I\_{21} \\\
+ I\_{13}  = I\_{xz} = \int -xzdm = I\_{zx} = I\_{31} \\\
+ I\_{23}  = I\_{yz} = \int -yzdm = I\_{zy} = I\_{32} \\\
 \end{eqnarray}$$
 
 In this solution, the **infinitesimal element** of the object can be **represented by the each Voxel.** Instead of calculating the mass \\(dm\\) for each voxel, we will calculate the volume \\(dv\\) of each voxel using the voxel size (the simple volume formula of a cube can be used because voxels are cubes). Then mass for each element would be mass density, \\(\rho\\) multiplied by the volume, \\(dv\\). Considering the mass density to be constant and substituting in the above equations we get:
 
 $$\begin{eqnarray}
-I\_{11} = I\_{xx} = \rho\int (y^2 + z^2)dv \\\\\\
-I\_{22} = I\_{yy} = \rho\int (x^2 + z^2)dv \\
-I\_{33} = I\_{zz} = \rho\int (x^2 + y^2)dv \
-I\_{12}  = I\_{xy} = \rho\int -xydv = I\_{yx} = I\_{21} \\
-I\_{13}  = I\_{xz} = \rho\int -xzdv = I\_{zx} = I\_{31} \\
-I\_{23}  = I\_{yz} = \rho\int -yzdv = I\_{zy} = I\_{32} \\
+I\_{11} = I\_{xx} = \rho\int (y^2 + z^2)dv \\\
+I\_{22} = I\_{yy} = \rho\int (x^2 + z^2)dv \\\
+I\_{33} = I\_{zz} = \rho\int (x^2 + y^2)dv \\\
+I\_{12}  = I\_{xy} = \rho\int -xydv = I\_{yx} = I\_{21} \\\
+I\_{13}  = I\_{xz} = \rho\int -xzdv = I\_{zx} = I\_{31} \\\
+I\_{23}  = I\_{yz} = \rho\int -yzdv = I\_{zy} = I\_{32} \\\
 \end{eqnarray}$$
 
 ### Advantages of the Voxelization Approach
