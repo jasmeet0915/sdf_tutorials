@@ -1,4 +1,4 @@
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 # Automatically Compute Inertia Tensor Proposal
 
