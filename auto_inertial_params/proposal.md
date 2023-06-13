@@ -1,4 +1,4 @@
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 # Automatically Compute Inertia Tensor Proposal
 
@@ -53,7 +53,7 @@ Currently to specify the `<inertial>` element of a `<link>` in SDFormat, the use
 This proposal suggests the addition of an `auto` parameter for the `<inertia>` tag that would tell `libsdformat` to calculate Inertia matrix values automatically for the respective link. 
 
 Usage example:    
-```
+```xml
 <inertia auto=”true” />
 ```
 
@@ -86,9 +86,9 @@ Voxelization of meshes/point cloud data is widely used for mesh processing. It c
 
 The Moment of Inertia Matrix of an object is a 3x3 symmetric matrix. This means for all elements in a Moment of Inertia Matrix, I:
 
-$$ I_{ij} = I_{ji} $$
+$$` I_{ij} = I_{ji} `$$
 
-The diagonal elements of the matrix are denoted as $I_{xx}$, $I_{yy}$ and $I_{zz}$ and are the Moments of Inertia of the object. The remaining 6 off-diagonal elements are called the Products of Inertia and their value depends on the symmetry of the object about the axes about which the MOI Tensor is being calculated. Only 3 values out of the 6 are needed since the matrix is symmetric. 
+The diagonal elements of the matrix are denoted as $`I_{xx}`$, \\(I_{yy}\\) and $ I_{zz} $ and are the Moments of Inertia of the object. The remaining 6 off-diagonal elements are called the Products of Inertia and their value depends on the symmetry of the object about the axes about which the MOI Tensor is being calculated. Only 3 values out of the 6 are needed since the matrix is symmetric. 
 
 >**Note:** If the axis about which the MOI Tensor is calculated, is taken to be the principal axis of inertia, then the products of inertia become 0 and the matrix becomes a diagonal matrix.
 
@@ -110,7 +110,7 @@ $$\begin{eqnarray}
  I_{23}  = I_{yz} = \int -yzdm = I_{zy} = I_{32} \\
 \end{eqnarray}$$
 
-In this solution, the **infinitesimal element** of the object can be **represented by the each Voxel.** Instead of calculating the mass $ dm $ for each voxel, we will calculate the volume $dv$ of each voxel using the voxel size (the simple volume formula of a cube can be used because voxels are cubes). Then mass for each element would be mass density, \\(\rho\\) multiplied by the volume, \\(dv\\). Considering the mass density to be constant and substituting in the above equations we get:
+In this solution, the **infinitesimal element** of the object can be **represented by the each Voxel.** Instead of calculating the mass \\(dm\\) for each voxel, we will calculate the volume \\(dv\\) of each voxel using the voxel size (the simple volume formula of a cube can be used because voxels are cubes). Then mass for each element would be mass density, \\(\rho\\) multiplied by the volume, \\(dv\\). Considering the mass density to be constant and substituting in the above equations we get:
 
 $$\begin{eqnarray}
 I_{11} = I_{xx} = \rho\int (y^2 + z^2)dv \\
